@@ -25,12 +25,47 @@ function renderLicenseLink(license) {
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {}
+function renderLicenseSection(license) {
+  return license === 'None' ? '' : `## <a name="licenselink"></a>License  
+     ${license}`;
+}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  return `# ${data.title}
+  const { title, license, description, install, usage, contribution, test, github, email } = data;
+  const licenseBadge = renderLicenseBadge(license);
+  const licenseSection = renderLicenseSection(license);
 
+  return `# ${title} ${licenseBadge}
+## Table of Contents
+[Description](#descriptionlink) |
+[Installation](#installlink) |
+[Usage](#usagelink) |
+${renderLicenseLink(license)} |
+[Contributing](#contributelink) |
+[Testing](#testslink) |
+[Questions](#questionslink)
+
+## <a name="descriptionlink"></a>Description
+${description}
+
+## <a name="installlink"></a>Installation 
+${install}
+
+## <a name="usagelink"></a>Usage 
+${usage}
+
+${licenseSection}
+
+## <a name="contributelink"></a>Contributing 
+${contribution}
+
+## <a name="testslink"></a>Tests 
+${test}
+
+## <a name="questionslink"></a>Questions 
+Github: ${github} 
+Email: ${email}
 `;
 }
 
