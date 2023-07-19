@@ -11,6 +11,9 @@
 ## <a name="descriptionlink"></a>Description
 The README Generator simplifies the creation of README files for your projects in GitHub. The app allows users to generate the file right from their Terminal!
 
+## <a name="walkhrough"></a>Video Walkthrough
+https://drive.google.com/file/d/1HM-0dXbKNXEBvadyhsNe6-OCdQJcnQqn/view?usp=drive_link
+
 ## <a name="installlink"></a>Installation 
 Run 'npm i' within your Terminal and then run 'node index.js'
 
